@@ -31,11 +31,11 @@ var exampleDashboard = datadog.Dashboard{
 
 func ExampleDashboard() {
 	config := LocalConfig{files: false}
-	item := Item{id: 1, d: Dashboard{}}
+	item := Item{id: "1", d: Dashboard{}}
 	item.renderElement(exampleDashboard, config)
 
 	// Unordered output:
-	// resource "datadog_timeboard" "1" {
+	// resource "datadog_dashboard" "1" {
 	//   title       = "Redis Timeboard (created via Terraform)"
 	//   description = "created using the Datadog provider in Terraform"
 	//   read_only   = true

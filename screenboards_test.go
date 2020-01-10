@@ -55,11 +55,11 @@ var exampleScreenboard = datadog.Screenboard{
 
 func Example() {
 	config := LocalConfig{files: false}
-	item := Item{id: 1, d: ScreenBoard{}}
+	item := Item{id: "1", d: ScreenBoard{}}
 	item.renderElement(exampleScreenboard, config)
 
 	// Unordered output:
-	// resource "datadog_screenboard" "1" {
+	// resource "datadog_dashboard" "1" {
 	//   title = "Test"
 	//   shared = false
 	//   widget {
